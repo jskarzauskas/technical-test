@@ -13,6 +13,31 @@
             // -- For every multiple of three print 'Fizz'
             // -- For every multiple of five print 'Buzz'
             // -- For every multiple of both three and five print 'FizzBuzz'
+
+            var intmax = Int32.Parse(args[0]);
+            string toConsole = string.Empty;
+
+            for (int i = 1; i <= intmax; i++)
+            {
+                toConsole = i.ToString();
+
+                if (i % 3 == 0)
+                {
+                    toConsole = "Fizz";
+
+                }
+                if (i % 5 == 0)
+                {
+                    toConsole = "Buzz";
+                }
+
+                if ((i % 3 == 0) && (i % 5 == 0))
+                {
+                    toConsole = "FizzBuzz";
+                }
+
+                Console.WriteLine(toConsole);
+            }
         }
     }
 }
